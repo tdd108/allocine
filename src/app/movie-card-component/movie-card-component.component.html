@@ -1,0 +1,10 @@
+<img src="{{ movieShortInfo.Poster }}" />
+<div *ngIf="showDetail && movieFullInfo">
+    <p>Director: {{ movieFullInfo.Director }}</p>
+    <p>Ratings: {{ movieFullInfo.Ratings[0].Value }}</p>
+    </div>
+    <div>
+    <button (click)="this.showDetail = !this.showDetail; getMovieDetail()">
+        Plus d'Info
+    </button>
+</div>
